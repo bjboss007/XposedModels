@@ -1,0 +1,60 @@
+{% extends "base2.html" %}
+{% load static %}
+
+{% block body %}
+    {% block navbar %}
+        {% include "includes/navbar.html" %}
+    {% endblock navbar %}
+
+    {% block carousel %}
+        {% include "includes/header.html" %}
+    {% endblock carousel %}
+
+    {% block content %}
+        <div class = "row">
+            <div class="divider-mask">
+                <span class="main-text">
+                    Our Models
+                    </span>
+                </div>
+                
+            </div>
+            <div class="row">
+            {% for worker in xmodels  %}
+                {% if worker.is_model %}
+                    <div class="col s12 m3">
+                        <div class="card">
+                            <div class="card-image z-depth-3">
+                                <img class="index-img" src="{{ worker.profile_photo.url }}">
+                                <a class="btn waves-effect waves-light button " href="{% url 'xposed:detail' worker.id %}">View Profile</a>
+                                
+                            </div>
+                        </div>
+                    </div>   
+                {% endif %}
+                  
+           
+            {% endfor %}
+            </div>
+            
+        </div>
+        
+        <div class="fixed-action-btn hide-on-small-only">
+                <a class="btn-floating btn-large red pulse">
+                    <i class="fa fa-paper-plane"></i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating blue"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="btn-floating yellow darken-1"><i class="fa fa-instagram"></i></a></li>
+                    <li><a class="btn-floating blue"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </div>
+    {% endblock content %}
+
+    {% block footer %}
+        {% include "includes/footer.html" %}
+    {% endblock footer %}
+
+
+    
+{% endblock body %}

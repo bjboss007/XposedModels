@@ -1,0 +1,50 @@
+{% extends "base2.html" %}
+{% load static %}
+
+{% block body %}
+    {% block navbar %}
+        {% include "includes/navbar.html" %}
+    {% endblock navbar %}
+
+    {% block content %}
+    <div class="container">
+        <div class="row form-header">
+            <div class="first">
+                
+            </div>
+            <div class="second"></div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col m4 l4 offset-m2 offset-l2" style="margin-top:30px">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="input-field">
+                    {{form.as_p}}
+                </div>
+                
+                <input type="submit" class="btn" value="Submit"> 
+
+            </form>
+        </div>
+        <div class="col m6 l6">
+            <p class="flow-text">
+                The form should be filled according
+            </p>
+            <p class="flow-text">
+                fullname: The fullname contains your firstname and your lastname only <br>
+                
+            </p>
+        </div>
+       
+        
+    </div>
+
+        
+    {% endblock content %}
+
+    {% block footer %}
+        {% include "includes/footer.html" %}
+    {% endblock footer %}
+{% endblock body %}

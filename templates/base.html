@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <title>Xposed Models</title>
+</head>
+<body>
+        <div class="navbar-header">
+            <div class="navbar-header-brand">
+                <a href="#">Xposed Models<a>
+            </div>
+            <ul class="navbar-header-list">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Models</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+     
+    <div class="row">
+        <div class="col-main">
+            <div class="main-header">
+                <h1>
+                    some text
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider-main">
+        <h1>
+            Our Models
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col s3">
+            something nice      
+        </div>
+        <div class="col">
+            something
+        </div>
+        <div class="col">
+            something
+        </div>
+    </div>
+ 
+<script src="{% static 'js/jquery.js' %}"></script>
+
+<script>
+    M.AutoInit();
+    
+      $('.carousel.carousel-slider').carousel({
+        fullWidth: true
+      });
+            
+    
+</script>
+</body>
+</html>

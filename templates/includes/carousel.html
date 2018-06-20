@@ -1,0 +1,28 @@
+{% load static %}
+<div class="row slide">
+    <div class="slider" style="height:800px">
+        <ul class="slides">
+            <li>
+            <img src="{% static 'images/image.jpg' %}"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>Want to be a model ? </h3>
+                <a class="btn btn-large wave-effects"  href="{% url 'xposed:register' %}">Apply now !</a>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/image2.jpg' %}"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>Left Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/image3.jpg' %}"> <!-- random image -->
+            <div class="caption center-align">
+                <h3>Right Aligned Caption</h3>
+                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+        </li>
+        </ul>
+    </div>
+</div>

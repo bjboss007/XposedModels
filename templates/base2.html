@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Models xposed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/materialize.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+
+    <link rel="icon" href="{% static 'images/modellogo1.jpeg' %}">
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    
+    
+</head>
+<body>
+    
+    {% block body %}
+    <div class="row parent">       
+        {% block navbar %}
+
+        {% endblock navbar %}
+
+
+        {% block carousel %}
+            
+        {% endblock carousel %}
+
+            {% block content %}
+
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large red">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                </ul>
+            </div>
+            {% endblock content %}
+
+        </div>
+
+        {% block footer %}
+            
+        {% endblock footer %}
+        
+                    
+
+{% endblock body %}
+
+    
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        
+                    
+    </script>
+    
+</body>
+</html>

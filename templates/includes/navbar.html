@@ -1,0 +1,24 @@
+{% load static %}
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="{% url 'xposed:home' %}" class="brand-logo"> <img src="{% static 'images/modellogo1.jpeg' %}" alt=""></a>
+            <a href="#" data-target="mobile-demo" style="color:rgb(11, 25, 218)" class="sidenav-trigger">
+                <i class="fa fa-bars" aria-hidden="true"></i>    
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{% url 'xposed:home' %}" >Home</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="{% url 'xposed:about' %}">About</a></li>
+                <li><a href="{% url 'xposed:gallery' %}">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{% url 'xposed:home' %}">Home</a></li>
+        <li><a href="#contact">Contacts</a></li>
+        <li><a href="{% url 'xposed:about' %}">About</a></li>
+        <li><a href="{% url 'xposed:gallery' %}">Gallery</a></li>
+    </ul> 
+</div>
+  
