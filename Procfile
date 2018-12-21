@@ -1,1 +1,1 @@
-web: gunicorn xposed.wsgi --log-file
+web: gunicorn xposed.wsgi --log-file =-
